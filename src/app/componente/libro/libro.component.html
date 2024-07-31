@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros</title>
+    <link rel="stylesheet" href="libro.component.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/prin.png" alt="libro">
+        </div>
+        <h1>"UN BUEN LIBRO ES UNA VOZ SABIA JUNTO A TI"</h1>
+        <nav>
+            <ul>
+                <li><a href="/menu">INICIO</a></li>
+                <li><a href="/libro">CATALOGO</a></li>
+                <li><a href="/lista-prestamo">GESTION</a></li>
+                <li><a href="/historial">HISTORIAL</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button (click)="navigateToActualizarCliente()">👤</button>
+            <button (click)="cerrarSesion()">Cerrar sesión</button> 
+        </div>
+    </header><br>
+    <div class="search-wrapper"><br>
+        <h1>Busca libro por : Autor ,Titulo,año de publicacio:</h1><br>
+        <form (ngSubmit)="onSearch()">
+            <input type="text" [(ngModel)]="search.titulo" name="titulo" placeholder="Título">
+            <input type="text" [(ngModel)]="search.autor" name="autor" placeholder="Autor">
+            <input type="text" [(ngModel)]="search.isbn" name="isbn" placeholder="NumeroISBN">
+            <input type="number" [(ngModel)]="search.anioPublicacion" name="anioPublicacion" placeholder="Año de Publicación">
+            
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+    <div class="card-wrapper">
+        <div class="card">
+            <div class="card-content">
+                <div class="status available">
+                    <div class="color-box"></div>
+                    <p><strong>Disponible:</strong></p>
+                </div>
+                <div class="status borrowed">
+                    <div class="color-box"></div>
+                    <p><strong>Prestado:</strong></p>
+                </div>
+                <div class="status unavailable">
+                    <div class="color-box"></div>
+                    <p><strong>No disponible:</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-wrapper">
+        <div *ngFor="let libro of filteredLibros" class="card"><br>
+            <div class="card-content">
+              <h1>libro</h1> 
+                <h2 class="card-title"><strong>Titulo:</strong>{{ libro.titulo }}</h2>
+                <p><strong>Autor:</strong> {{ libro.autor }}</p>
+                <p><strong>Numero ISBN:</strong> {{ libro.isbn }}</p>
+                <p><strong>Año publicación:</strong> {{ libro.anioPublicacion }}</p>
+                <p><strong>Estado:</strong> 
+                    <button class="estado-boton" [ngClass]="{
+                        'disponible': libro.estado === 1,
+                        'prestado': libro.estado === 2,
+                        'no-disponible': libro.estado === 3
+                    }" [disabled]="libro.estado === 3" (click)="onEstadoClick(libro)">
+                        {{ libro.estado === 1 ? 'Disponible' : (libro.estado === 2 ? 'Prestado' : 'No Disponible') }}
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <small>Derechos reservados &copy; 2024-2025</small>
+        <small>Irar Nankamai</small>
+        <small>DomeniKa Delgado</small>
+        <address>
+          <a href="http://www.google.com">Google</a>
+        </address>
+    </footer>
+</body>
+</html>

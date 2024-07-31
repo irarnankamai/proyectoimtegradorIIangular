@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"UN BUEN LIBRO ES UNA VOZ SABIA JUNTO A TI"</title>
+    <link rel="stylesheet" href="menu.component.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/prin.png" alt="libro">
+        </div>
+        <nav>
+            <h1>"UN BUEN LIBRO ES UNA VOZ SABIA JUNTO A TI"</h1>
+            <ul>
+                <li><a href="/menu">INICIO</a></li>
+                <li><a href="/libro">CATALOGO</a></li>
+                <li><a href="/lista-prestamo">GESTION</a></li>
+                <li><a href="/historial">HISTORIAL</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button (click)="navigateToActualizarCliente()">👤</button>
+            <button (click)="cerrarSesion()">Cerrar sesión</button> 
+        </div>
+    </header>
+    <main>
+        <div class="contenido-izquierdo">
+      
+            <h1>Sobre Nosotros</h1>
+            <p>
+            Tenemos una  vasta colección de recursos digitales, nuestra biblioteca se compromete a proporcionar acceso a información y conocimiento a toda la comunidad. Ofrecemos un entorno acogedor y estimulante, diseñado para inspirar y apoyar a nuestros usuarios en su búsqueda de conocimientos y desarrollo personal. </p>
+            
+            <h1>Misión</h1>
+            <p>
+            
+            Ser un centro de excelencia en la provisión de recursos informativos, culturales y educativos sobre todo en la colección de nuevos libros. </p>
+            
+            <h1>Visión</h1>
+            
+            <p>
+            
+            Nuestra visión es convertirnos en un referente regional y nacional en servicios bibliotecarios, caracterizándonos por la innovación y la calidad. Aspiramos a ser un lugar donde el conocimiento y la cultura se encuentren, promoviendo el desarrollo intelectual y cultural .Nos imaginamos un futuro en el que cada persona tenga acceso fácil y gratuito a los recursos necesarios para su crecimiento personal y profesional.
+            </p>
+          
+        </div>
+        <div class="contenido-derecho">
+      
+          <h2>LIBROS DISPONIBLES</h2>
+          <div class="slider">
+            <div class="slide"><img src="assets/poder.jpeg" alt="Libro 2"></div><br>
+        </div>
+        <a href="/libro" class="custom-button">Ver catalogo</a><br>
+        </div>
+      </main>
+    <section class="areas">
+        <h2>Libros</h2>
+        <div class="books">
+            <div class="book">
+                <img src="assets/poder.jpeg" alt="El Señor de los Anillos">
+                <p>48 LEYES DEL PODER</p>
+            </div>
+            <div class="book">
+                <img src="assets/club.jpeg" alt="Ugly Love">
+                <p>El CLUB DE LOS PSICOPATAS</p>
+            </div>
+            <div class="book">
+                <img src="assets/psico.jpeg" alt="Stardust">
+                <p>PSICOLOGIA OSCURA</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <small>Derechos reservados &copy; 2024-2025</small>
+        <small>Irar Nankamai</small>
+        <small>DomeniKa Delgado</small>
+        <address>
+          <a href="http://www.google.com">Google</a>
+        </address>
+    </footer>
+</body>
+</html>

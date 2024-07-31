@@ -1,0 +1,299 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.grid-container {
+  display: grid;
+  place-items: center; 
+  height: 100vh; 
+}
+
+img {
+  width: 200px; 
+  height: auto; 
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #292828;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #f0e9e9;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: green;
+}
+
+.h1{
+  color: #fff;
+}
+
+header .search {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+header .search input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+header .search button {
+  padding: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  pointer-events: visible;
+}
+
+header .user-actions button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+
+.logo img {
+  height: 15px;
+  margin-bottom: 15px;
+  width: 45px;
+}
+
+
+.mySlides {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+@keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+/* Áreas y Beneficios */
+.areas .books, .benefits .benefits-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.areas .book, .benefits .benefit {
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  flex: 1 1 100%;
+}
+
+.areas .book img, .benefits .benefit img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsividad */
+@media (min-width: 600px) {
+  .areas .book, .benefits .benefit {
+    flex: 1 1 calc(33.333% - 40px);
+  }
+}
+
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer small {
+  display: block;
+}
+
+footer address a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer address a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.contenido-izquierdo, .contenido-derecho {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Ensure the slider fits within its container */
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.slider .slide:first-child {
+  display: flex;
+}
+
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: blue; /* Color de fondo azul */
+  border-radius: 5px;
+}
+
+.custom-button:hover {
+  background-color: green; /* Cambio de color al pasar el ratón a verde */
+}
+
+/*   m*/
+.logout-container {
+  position: relative;
+  display: inline-block;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+border-radius: 0ch;
+}

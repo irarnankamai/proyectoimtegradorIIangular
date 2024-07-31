@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"UN BUEN LIBRO ES UNA VOZ SABIA JUNTO A TI"</title>
+   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/prin.png" alt="libro">
+        </div>
+        <nav>
+            <h1>"UN BUEN LIBRO ES UNA VOZ SABIA JUNTO A TI"</h1>
+            <ul>
+                <li><a href="/menu">INICIO</a></li>
+                <li><a href="/libro">CATALOGO</a></li>
+                <li><a href="/lista-prestamo">GESTION</a></li>
+                <li><a href="/historial">HISTORIAL</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button (click)="navigateToActualizarCliente()">👤</button>
+            <button (click)="cerrarSesion()">Cerrar sesión</button> 
+        </div>
+    </header>
+    <div class="container">
+      <h2>DETALLE DEL LIBRO</h2>
+      <div class="details-box">
+        <p><strong>Id del Libro:</strong> {{ libroId }}</p>
+        <p><strong>Título:</strong> {{ titulo }}</p>
+        <p><strong>Autor:</strong> {{ autor }}</p>
+        <p><strong>Numero ISBN:</strong> {{ isbn }}</p>
+        <p><strong>Año de Publicación:</strong> {{ anioPublicacion }}</p>
+      </div>
+      
+      <h2>REALIZAR PRESTAMO</h2>
+      <form (ngSubmit)="onSubmit()" #prestamoForm="ngForm" class="form-box">
+        <div class="form-group">
+          <label for="dias">Dias:</label>
+          <input type="number" id="dias" [(ngModel)]="prestamo.dias" name="dias" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+      </form>
+    </div>
+
+    <footer>
+        <small>Derechos reservados &copy; 2024-2025</small>
+        <small>Irar Nankamai</small>
+        <small>DomeniKa Delgado</small>
+        <address>
+          <a href="http://www.google.com">Google</a>
+        </address>
+    </footer>
+</body>
+</html>

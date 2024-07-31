@@ -1,0 +1,158 @@
+/* Estilos generales */
+body {
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background-color: #202224; /* Azul oscuro universitario */
+  color: white;
+}
+
+.logo img {
+  height: 60px;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Georgia', serif;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  color: green;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-actions button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: white;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 30px;
+}
+
+.card {
+  border: 1px solid #004080;
+  border-radius: 8px;
+  padding: 25px;
+  width: calc(33.333% - 50px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #eb4242;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card-title {
+  font-size: 1.6em;
+  margin: 0;
+  color: #003366;
+}
+
+.estado-boton {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.disponible {
+  background-color: #0066cc; /* Azul medio */
+}
+
+.prestado {
+  background-color: #00509e; /* Azul oscuro */
+}
+
+.no-disponible {
+  background-color: #003366; /* Azul muy oscuro */
+  cursor: not-allowed;
+}
+
+/* Estilos para los estados */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el cuadro de color y el texto */
+}
+
+.status .color-box {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.available .color-box {
+  background-color: #0066cc;
+}
+
+.borrowed .color-box {
+  background-color: #00509e;
+}
+
+.unavailable .color-box {
+  background-color: #003366;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+footer small {
+  display: block;
+}
+
+footer address a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer address a:hover {
+  text-decoration: underline;
+}
